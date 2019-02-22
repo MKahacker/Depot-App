@@ -15,3 +15,11 @@ Product.create!(title: 'Dairy Products', description: %{<p><em>German Gouda Chee
   were on vacation in the Autrian mountains. Truly, a exotic and relaxing taste.</p> },
 image_url: 'dairy.jpg',
 price: 150.00)
+
+Product.create!(title: 'Black Bread', description: %{<p><em>Russian Black Bread</em>
+  Black Bread from the bakeries of Moscow. Exported fresh from the capital of Russia.
+  You can use this bread to spread butter, preserves, or just snack on it. You will expereince the
+  taste Russian homeland by eating this delicious bread. While eating this bread you will feel as if you
+  were at a cafe in Saint Petersburg. Get your homey experience no</p> },
+image_url: 'black_bread.jpg',
+price: 75.00)
