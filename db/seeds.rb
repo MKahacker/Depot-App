@@ -13,5 +13,5 @@ Product.create!(title: 'Dairy Products', description: %{<p><em>German Gouda Chee
   You can add this cheese to salads, entrees, or just eat it with bread. You will expereince the
   taste, smell, and feel of the alp mountains. While eating this cheese you will feel as if you
   were on vacation in the Autrian mountains. Truly, a exotic and relaxing taste.</p> },
-img_url: 'dairy.jpg',
+image_url: 'dairy.jpg',
 price: 150.00)
