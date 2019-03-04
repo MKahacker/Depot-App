@@ -11,3 +11,9 @@ two:
   description: MyText
   image_url: dairy.jpg
   price: 9.99
+
+ruby:
+  title: Caffiene Candy Ruby
+  description: Ruby is a sweet candy that will wake you up
+  price: 1.95
+  image_url: ruby.jpg
