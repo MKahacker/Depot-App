@@ -45,4 +45,12 @@ class ProductTest < ActiveSupport::TestCase
       assert new_product(image_url, @count).invalid?, "#{image_url} shouldn't be valid"
     end
   end
+  test "product is not valid without a unique title" do
+    product = Product.create(title: products(:ruby).title,
+                             description: "yyy",
+                             price: 1,
+                            image_url: "ruby.jpg")
+    assert product.invalid?
+    assert_equal ["has already been taken"], product.errors[:title]
+  end
 end
