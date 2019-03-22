@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Exotic Online Store
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %header{:class => "main"}
+      = image_tag 'logo.svg', alt: 'The online store logo'
+    %section{:class => "content"}
+      %nav{:class => "side_nav"}
+        %ul
+          %li= link_to 'Home', root_url
+          %li= link_to 'Questions', question_url
+          %li= link_to 'News', news_url
+          %li= link_to 'Contact', contact_url
+      %main{:class => "#{controller.controller_name}"}
+        = yield
