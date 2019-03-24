@@ -6,7 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+LineItem.delete_all
 Product.delete_all
+
 
 Product.create!(title: 'Dairy Products', description: %{<p><em>German Gouda Cheese</em>
   Good cheese from the Alp mountains. Exported fresh from the northern regions of Austria.
@@ -23,3 +25,8 @@ Product.create!(title: 'Black Bread', description: %{<p><em>Russian Black Bread<
   were at a cafe in Saint Petersburg. Get your homey experience no</p> },
 image_url: 'black_bread.jpg',
 price: 75.00)
+
+Product.create!(title: "Caffiene Candy Ruby",
+description: "Ruby is a sweet candy that will wake you up",
+price: 1.95,
+image_url: "ruby.jpg")
