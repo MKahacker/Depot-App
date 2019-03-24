@@ -4,9 +4,11 @@
 %h1 Your Pragmatic Catalog
 
 %ul{:class => "catalog"}
-  - @products.each do |product|
-    %li
-      = image_tag(product.image_url)
-      %h2= product.title
-      %p= sanitize(product.description)
-      .price= number_to_currency(product.price)
+  - cache @products do
+    - @products.each do |product|
+      - cache product do
+        %li
+          = image_tag(product.image_url)
+          %h2= product.title
+          %p= sanitize(product.description)
+          .price= number_to_currency(product.price)
