@@ -9,13 +9,13 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     %header{:class => "main"}
-      = image_tag 'logo.svg', alt: 'The online store logo'
+      = image_tag 'icon.jpg', alt: 'The online store logo'
     %section{:class => "content"}
       %nav{:class => "side_nav"}
         %ul
-          %li= link_to 'Home', root_url
-          %li= link_to 'Questions', question_url
-          %li= link_to 'News', news_url
-          %li= link_to 'Contact', contact_url
+          %li= link_to 'Home', "/"
+          %li= link_to 'Questions', "/questions"
+          %li= link_to 'News', "/news"
+          %li= link_to 'Contact', "/contact"
       %main{:class => "#{controller.controller_name}"}
         = yield
