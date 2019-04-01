@@ -12,8 +12,9 @@
       = image_tag 'icon.jpg', alt: 'The online store logo'
     %section{:class => "content"}
       %nav{:class => "side_nav"}
-        %div{:id=>"cart", :class=>"carts"}
-          =render @cart
+        -if @cart
+          %div{:id=>"cart", :class=>"carts"}
+            =render @cart
         %ul
           %li= link_to 'Home', "/"
           %li= link_to 'Questions', "/questions"
