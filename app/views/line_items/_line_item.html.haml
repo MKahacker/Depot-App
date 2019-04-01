@@ -1,4 +1,10 @@
-%tr
-  %td{:class=>"quantity"}= line_item.quantity
-  %td= line_item.product.title
-  %td{:class=>"price"}=number_to_currency(line_item.total_price)
+- if line_item == @current_item
+  %tr{:class=>"line-item-highlight"}
+    %td{:class=>"quantity"}= line_item.quantity
+    %td= line_item.product.title
+    %td{:class=>"price"}=number_to_currency(line_item.total_price)
+-else
+  %tr
+    %td{:class=>"quantity"}= line_item.quantity
+    %td= line_item.product.title
+    %td{:class=>"price"}=number_to_currency(line_item.total_price)
