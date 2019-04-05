@@ -15,8 +15,9 @@
   .field
     = f.label :email
     = f.text_field :email, id: :order_email, size: 40
-  .field
-    = f.label :pay_type
-    = f.select :pay_type, Order.pay_types.keys, id: :order_pay_type, prompt: 'Select a payment method'
+  #pay-type-component
+  -# .field
+  -#   = f.label :pay_type
+  -#   = f.select :pay_type, Order.pay_types.keys, id: :order_pay_type, prompt: 'Select a payment method'
   .actions
     = f.submit 'Place Order'
